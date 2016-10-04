@@ -20,6 +20,7 @@ pops `x`'s top data peice.
 Push the first argument to `x` stack.
 
 Ex.
+
     00000001 165 111
     ;;Push 165 to stack 111
 
@@ -28,18 +29,22 @@ Ex.
 Takes every number in stack `x` and strings them together and puts it to the screen.
 
 Ex.
+
      00000001 127796
      00000010
-Push 127796 to stack `001` and print the number 127796
+
+Push `127796` to stack `001` and print the number `127796`
 
 ### xxprint
 
 Takes every number in stack `x` and converts it to Unicode and prints it.
 
 Ex.
+
      00000001 127796
      00000011
-Push 127796 to stack `001` and print `🌴`
+
+Push `127796` to stack `001` and print `🌴`
 
 ## Syntax
 
