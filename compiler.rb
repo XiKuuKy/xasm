@@ -75,13 +75,77 @@ class XASM
     @code.split("\n").each do |i|
       x = i.split(" ")
       if x[0] == "00000000"
-        @sA.pop
+        if x[1] == nil
+          @sA.pop
+        elsif x[1] == "001"
+          @sA.pop
+        elsif x[1] == "010"
+          @sB.pop
+        elsif x[1] == "011"
+          @sC.pop
+        elsif x[1] == "100"
+          @sD.pop
+        elsif x[1] == "101"
+          @sE.pop
+        elsif x[1] == "110"
+          @sF.pop
+        elsif x[1] == "111"
+          @sG.pop
+        end
       elsif x[0] == "00000001"
-        @sA.push(x[1].to_i)
+        if x[2] == nil
+          @sA.push(x[1].to_i)
+        elsif x[2] == "001"
+          @sA.push(x[1].to_i)
+        elsif x[2] == "010"
+          @sB.push(x[1].to_i)
+        elsif x[2] == "011"
+          @sC.push(x[1].to_i)
+        elsif x[2] == "100"
+          @sD.push(x[1].to_i)
+        elsif x[2] == "101"
+          @sE.push(x[1].to_i)
+        elsif x[2] == "110"
+          @sF.push(x[1].to_i)
+        elsif x[2] == "111"
+          @sG.push(x[1].to_i)
+        end
       elsif x[0] == "00000010"
-        @sA.xprint
+        if x[1] == nil
+          @sA.xprint
+        elsif x[1] == "001"
+          @sA.xprint
+        elsif x[1] == "010"
+          @sB.xprint
+        elsif x[1] == "011"
+          @sC.xprint
+        elsif x[1] == "100"
+          @sD.xprint
+        elsif x[1] == "101"
+          @sE.xprint
+        elsif x[1] == "110"
+          @sF.xprint
+        elsif x[1] == "111"
+          @sG.xprint
+        end
       elsif x[0] == "00000011"
-        @sA.xxprint
+        if x[1] == nil
+          @sA.xxprint
+        elsif x[1] == "001"
+          @sA.xxprint
+        elsif x[1] == "010"
+          @sB.xxprint
+        elsif x[1] == "011"
+          @sC.xxprint
+        elsif x[1] == "100"
+          @sD.xxprint
+        elsif x[1] == "101"
+          @sE.xxprint
+        elsif x[1] == "110"
+          @sF.xxprint
+        elsif x[1] == "111"
+          @sG.xxprint
+        end
       end
     end
   end
@@ -131,5 +195,18 @@ x = XASM.new("
 00000000
 00000000
 00000001 10
-00000011")
+00000011
+00000001 256 111
+00000001 216 111
+00000001 216 111
+00000001 10084 111
+00000001 127796 111
+00000001 127761 111
+00000001 127762 111
+00000001 127763 111
+00000001 127764 111
+00000001 127765 111
+00000001 127766 111
+00000001 10 111
+00000011 111")
 x.run()
