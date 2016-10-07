@@ -194,7 +194,246 @@ class XASM
         elsif x[3] == "111"
           @sG.push(output)
         end
-      end
+      elsif x[0] == "00000101"
+        if x[2] == "001"
+          one = @sA.top
+        elsif x[2] == "010"
+          one = @sB.top
+        elsif x[2] == "011"
+          one = @sC.top
+        elsif x[2] == "100"
+          one = @sD.top
+        elsif x[2] == "101"
+          one = @sE.top
+        elsif x[2] == "110"
+          one = @sF.top
+        elsif x[2] == "111"
+          one = @sG.top
+        end
+        if x[1] == "001"
+          two = @sA.top
+        elsif x[1] == "010"
+          two = @sB.top
+        elsif x[1] == "011"
+          two = @sC.top
+        elsif x[1] == "100"
+          two = @sD.top
+        elsif x[1] == "101"
+          two = @sE.top
+        elsif x[1] == "110"
+          two = @sF.top
+        elsif x[1] == "111"
+          two = @sG.top
+        end
+        output = Op.new(one,two).subraction()
+        puts(output)
+        if x[3] == "001"
+          @sA.push(output)
+        elsif x[3] == "010"
+          @sB.push(output)
+        elsif x[3] == "011"
+          @sC.push(output)
+        elsif x[3] == "100"
+          @sD.push(output)
+        elsif x[3] == "101"
+          @sE.push(output)
+        elsif x[3] == "110"
+          @sF.push(output)
+        elsif x[3] == "111"
+          @sG.push(output)
+        end
+      elsif x[0] == "00000110"
+        if x[2] == "001"
+          one = @sA.top
+        elsif x[2] == "010"
+          one = @sB.top
+        elsif x[2] == "011"
+          one = @sC.top
+        elsif x[2] == "100"
+          one = @sD.top
+        elsif x[2] == "101"
+          one = @sE.top
+        elsif x[2] == "110"
+          one = @sF.top
+        elsif x[2] == "111"
+          one = @sG.top
+        end
+        if x[1] == "001"
+          two = @sA.top
+        elsif x[1] == "010"
+          two = @sB.top
+        elsif x[1] == "011"
+          two = @sC.top
+        elsif x[1] == "100"
+          two = @sD.top
+        elsif x[1] == "101"
+          two = @sE.top
+        elsif x[1] == "110"
+          two = @sF.top
+        elsif x[1] == "111"
+          two = @sG.top
+        end
+        output = Op.new(one,two).multiplication()
+        puts(output)
+        if x[3] == "001"
+          @sA.push(output)
+        elsif x[3] == "010"
+          @sB.push(output)
+        elsif x[3] == "011"
+          @sC.push(output)
+        elsif x[3] == "100"
+          @sD.push(output)
+        elsif x[3] == "101"
+          @sE.push(output)
+        elsif x[3] == "110"
+          @sF.push(output)
+        elsif x[3] == "111"
+          @sG.push(output)
+        end
+      elsif x[0] == "00000111"
+        if x[2] == "001"
+          one = @sA.top
+        elsif x[2] == "010"
+          one = @sB.top
+        elsif x[2] == "011"
+          one = @sC.top
+        elsif x[2] == "100"
+          one = @sD.top
+        elsif x[2] == "101"
+          one = @sE.top
+        elsif x[2] == "110"
+          one = @sF.top
+        elsif x[2] == "111"
+          one = @sG.top
+        end
+        if x[1] == "001"
+          two = @sA.top
+        elsif x[1] == "010"
+          two = @sB.top
+        elsif x[1] == "011"
+          two = @sC.top
+        elsif x[1] == "100"
+          two = @sD.top
+        elsif x[1] == "101"
+          two = @sE.top
+        elsif x[1] == "110"
+          two = @sF.top
+        elsif x[1] == "111"
+          two = @sG.top
+        end
+        output = Op.new(one,two).division()
+        puts(output)
+        if x[3] == "001"
+          @sA.push(output)
+        elsif x[3] == "010"
+          @sB.push(output)
+        elsif x[3] == "011"
+          @sC.push(output)
+        elsif x[3] == "100"
+          @sD.push(output)
+        elsif x[3] == "101"
+          @sE.push(output)
+        elsif x[3] == "110"
+          @sF.push(output)
+        elsif x[3] == "111"
+          @sG.push(output)
+        end
+        elsif x[0] == "00001000"
+        if x[2] == "001"
+          one = @sA.top
+        elsif x[2] == "010"
+          one = @sB.top
+        elsif x[2] == "011"
+          one = @sC.top
+        elsif x[2] == "100"
+          one = @sD.top
+        elsif x[2] == "101"
+          one = @sE.top
+        elsif x[2] == "110"
+          one = @sF.top
+        elsif x[2] == "111"
+          one = @sG.top
+        end
+        if x[1] == "001"
+          two = @sA.top
+        elsif x[1] == "010"
+          two = @sB.top
+        elsif x[1] == "011"
+          two = @sC.top
+        elsif x[1] == "100"
+          two = @sD.top
+        elsif x[1] == "101"
+          two = @sE.top
+        elsif x[1] == "110"
+          two = @sF.top
+        elsif x[1] == "111"
+          two = @sG.top
+        end
+        output = Op.new(one,two).xor()
+        puts(output)
+        if x[3] == "001"
+          @sA.push(output)
+        elsif x[3] == "010"
+          @sB.push(output)
+        elsif x[3] == "011"
+          @sC.push(output)
+        elsif x[3] == "100"
+          @sD.push(output)
+        elsif x[3] == "101"
+          @sE.push(output)
+        elsif x[3] == "110"
+          @sF.push(output)
+        elsif x[3] == "111"
+          @sG.push(output)
+        end
+        elsif x[0] == "00001000"
+        if x[2] == "001"
+          one = @sA.top
+        elsif x[2] == "010"
+          one = @sB.top
+        elsif x[2] == "011"
+          one = @sC.top
+        elsif x[2] == "100"
+          one = @sD.top
+        elsif x[2] == "101"
+          one = @sE.top
+        elsif x[2] == "110"
+          one = @sF.top
+        elsif x[2] == "111"
+          one = @sG.top
+        end
+        if x[1] == "001"
+          two = @sA.top
+        elsif x[1] == "010"
+          two = @sB.top
+        elsif x[1] == "011"
+          two = @sC.top
+        elsif x[1] == "100"
+          two = @sD.top
+        elsif x[1] == "101"
+          two = @sE.top
+        elsif x[1] == "110"
+          two = @sF.top
+        elsif x[1] == "111"
+          two = @sG.top
+        end
+        output = Op.new(one,two).modulo()
+        puts(output)
+        if x[3] == "001"
+          @sA.push(output)
+        elsif x[3] == "010"
+          @sB.push(output)
+        elsif x[3] == "011"
+          @sC.push(output)
+        elsif x[3] == "100"
+          @sD.push(output)
+        elsif x[3] == "101"
+          @sE.push(output)
+        elsif x[3] == "110"
+          @sF.push(output)
+        elsif x[3] == "111"
+          @sG.push(output)
+        end
     end
   end
 end
@@ -259,7 +498,11 @@ x = XASM.new("
 00000011 111
 00000001 6 010
 00000001 250 100
-00000100 010 100 101
-00000001 10 101
-00000011 101")
+00000100 010 100 100
+00000001 10 100
+00000011 100
+00000000 100
+00000001 2 110
+00000001 110 100 100
+00000011 100")
 x.run()
